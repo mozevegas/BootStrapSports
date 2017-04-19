@@ -3,9 +3,15 @@
 }
 <!--  Jumbotron -->
 <div class="jumbotron">
-    <h1><strong>TIY Sports</strong></h1>
-    <p class="lead"><span class="glyphicon glyphicon-heart"></span> For the students of The Iron Yard</p>
-    <img src="~/Content/Images/Sports.jpg" alt="Alternate Text" class="img-circle" width="200" height="200" />
+    <div class="media">
+        <div class="media-body">
+            <h1 class="media-heading">TIY Sports</h1>
+            <p><span class="glyphicon glyphicon-heart"></span> For the students of The Iron Yard</p>
+        </div>
+        <div class="media-right">
+            <img src="~/Content/Images/Sports.jpg" class="media-object img-circle" width="150" height="150">
+        </div>
+    </div>
 </div>
 <!--  PhotoArticlesPanel -->
 <div class="row">
@@ -13,7 +19,7 @@
         <div class="thumbnail">
             <img src="~/Content/Images/football.jpg" alt="...">
             <div class="caption">
-                <h3>Football</h3>
+                <h3><strong>Football</strong></h3>
             </div>
         </div>
     </div>
@@ -21,7 +27,7 @@
         <div class="thumbnail">
             <img src="~/Content/Images/baseball.jpg" alt="...">
             <div class="caption">
-                <h3>Baseball</h3>
+                <h3><strong>Baseball</strong></h3>
             </div>
         </div>
     </div>
@@ -29,7 +35,7 @@
         <div class="thumbnail">
             <img src="~/Content/Images/basketball.jpg" alt="...">
             <div class="caption">
-                <h3>Basketball</h3>
+                <h3><strong>Basketball</strong></h3>
             </div>
         </div>
     </div>
@@ -37,7 +43,7 @@
         <div class="thumbnail">
             <img src="~/Content/Images/quidditch.jpg" alt="...">
             <div class="caption">
-                <h3>Quidditch</h3>
+                <h3><strong>Quidditch</strong></h3>
             </div>
         </div>
     </div>
@@ -54,13 +60,14 @@
 <div class="panel-group">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <p><span class="glyphicon glyphicon-user"></span><small><strong> Please log in to edit</strong></small></p>
+            <p><span class="glyphicon glyphicon-user"></span><small><strong> Please log in to edit</strong></small><button type="button" class="btn btn-primary btn-md pull-right">Facebook</button></p>
         </div>
     </div>
 </div>
 <!--  Teams Panel -->
 <div class="panel-group">
     <div class="panel panel-primary">
+        <!--  Teams Header Panel  -->
         <div class="panel-heading">
             <h4>
                 <span class="glyphicon glyphicon-chevron-right"></span>
@@ -68,20 +75,76 @@
                 <span class="pull-right badge">666 Teams</span>
             </h4>
         </div>
+        <!--  Teams List of Image Media Teams  -->
         <div class="panel-body">
-            <h4>Tampa Dart Dynamos</h4>
+            <div class="media">
+                <div class="media-left media-top">
+                    <img src="~/Content/Images/dartboard.png" class="media-object" style="width: 70px; height: 70px">
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading"><strong>Tampa Dart Dynamos<span class="pull-right badge">8 Players</span></strong></h4>
+                    <p>Lorem ipsum...</p>
+                </div>
+            </div>
         </div>
-        <div class="panel-footer">
+        <div class="panel-body">
+            <div class="media">
+                <div class="media-left media-top">
+                    <img src="~/Content/Images/pingpong.jpg" class="media-object img-rounded"  style="width: 70px; height: 70px">
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading"><strong>St Pete Ping Pong Powerhouse<span class="pull-right badge">6 Players</span></strong></h4>
+                    <p>Lorem ipsum...</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="media">
+                <div class="media-left media-top">
+                    <img src="~/Content/Images/golf.jpg" class="media-object img-rounded"  style="width: 70px; height: 70px">
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading"><strong>Orlando Golf Gang<span class="pull-right badge">8 Players</span></strong></h4>                    <p>Lorem ipsum...</p>
+                </div>
+            </div>
+        </div>
+
+        <!--  Pagination for TeamsPanel  -->
+        <div class="panel-footer text-center">
             <ul class="pagination">
-                <li><a href="#">1</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-hand-left"></span></a></li>
                 <li><a href="#">1</a></li>
                 <li><a href="#">2</a></li>
                 <li class="active"><a href="#">3</a></li>
                 <li><a href="#">4</a></li>
                 <li><a href="#">5</a></li>
                 <li><a href="#">6</a></li>
-                <li><a href="#"></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-hand-right"></span></a></li>
             </ul>
+        </div>
+    </div>
+</div>
+<!--  Games Panel -->
+<div class="panel-group">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4>
+                <span class="glyphicon glyphicon-flash"></span>
+                <strong>Games</strong>
+                <span class="pull-right badge">Games are cool</span>
+            </h4>
+        </div>
+        <div class="panel-body">
+            <table class="table table-condensed">
+                <thead>
+                    <tr><th>#</th><th>Home Team</th><th>Away Team</th><th>Score</th></tr>
+                </thead>
+                <tbody>
+                    <tr class="success"><td>1</td><td>Tampa Dart Dynamos</td><td>Buffalo BullsEyes</td><td>20-17</td></tr>
+                    <tr><td>2</td><td>St Pete Ping Pong Power House</td><td>Philly Paddlers</td><td>18-12</td></tr>
+                    <tr><td>3</td><td>Orlando Golf Gang</td><td>Portland Putters</td><td>2-1</td></tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
